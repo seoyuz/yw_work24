@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>청년일경험 퍼블리싱 작업 리스트</title>
+	<style>
+		@font-face {font-family: 'Pretendard';font-weight: 700;font-display: swap;src: local('PretendardStd ExtraBold'), url('font/Pretendard-ExtraBold.subset.woff2') format('woff2'), url('font/Pretendard-ExtraBold.subset.woff') format('woff'), url("font/Pretendard-ExtraBold.ttf") format("truetype");}
+		@font-face {font-family: 'Pretendard';font-weight: 600;font-display: swap;src: local('Pretendard Bold'), url('font/Pretendard-Bold.subset.woff2') format('woff2'), url('font/Pretendard-Bold.subset.woff') format('woff'), url("font/Pretendard-Bold.ttf") format("truetype");}
+		@font-face {font-family: 'Pretendard';font-weight: 500;font-display: swap;src: local('Pretendard SemiBold'), url('font/Pretendard-SemiBold.subset.woff2') format('woff2'), url('font/Pretendard-SemiBold.subset.woff') format('woff'), url("font/Pretendard-SemiBold.ttf") format("truetype");}
+		@font-face {font-family: 'Pretendard';font-weight: 400;font-display: swap;src: local('Pretendard Medium'), url('font/Pretendard-Medium.subset.woff2') format('woff2'), url('font/Pretendard-Medium.subset.woff') format('woff'), url("font/Pretendard-Medium.ttf") format("truetype");}
+		@font-face {font-family: 'Pretendard';font-weight: 300;font-display: swap;src: local('Pretendard Regular'), url('font/Pretendard-Regular.subset.woff2') format('woff2'), url('font/Pretendard-Regular.subset.woff') format('woff'), url("font/Pretendard-Regular.ttf") format("truetype");}
+
+		body {font-family: 'Pretendard', 'Noto Sans KR', sans-serif; font-weight: 300; padding: 40px; background: #f4f6fa; color: #333;}
+		.wrap {position: relative;}
+		h1 {font-size: 30px; margin-bottom: 40px;}
+		table {width: 100%; min-width: 1400px; border-collapse: collapse; border-spacing: 0; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); table-layout: fixed;}
+		th, td { padding: 14px 12px; font-size: 14px; border: 1px solid #eee; text-align: center; word-break: break-word;}
+		th {background-color: #ebe9fc; border: 1px solid #dddbf3;  font-weight: 600; color: #333; text-align: center !important;}
+		tr:hover {background-color: #f9f9f9;}
+		td a {color: #333; text-decoration: underline; font-weight: 500;}
+		td a:hover {text-decoration: underline;}
+		th:nth-child(1), td:nth-child(1), th:nth-child(2), td:nth-child(2), th:nth-child(3), td:nth-child(3), th:nth-child(4), td:nth-child(4) {width: 7%; text-align: left;} /* Depth1~4 */
+		th:nth-child(5), td:nth-child(5) {width: 24%; text-align: left;} /* 파일명 */
+		th:nth-child(6), td:nth-child(6) {width: auto; text-align: left;} /* 비고 */
+		th:nth-child(7), td:nth-child(7) {width: 70px;} /* 작업자 */
+		th:nth-child(8), td:nth-child(8) {width: 120px;} /* 작업일자 */
+		th:nth-child(9), td:nth-child(9) {width: 80px;} /* 바로가기 */
+		th:nth-child(10), td:nth-child(10) {width: 90px;} /* 작업상태 */
+		th:nth-child(6) {text-align: center;} /* 비고 중앙 정렬 */
+
+		.date { position: absolute; right: 0; top: 0; font-size: 14px; line-height: 150%; text-align: right;}
+		.done {background: #e2fbe3; color: #2f855a;}
+		.not-done {background: #ffe1e1; color: #c53030;}
+		.doing {background: #fff9cc; color: #b7791f;}
+		#csv-data { display: none; }
+		.link-btn { display: inline-block; padding: 6px 10px; background-color: #5b63f7; color: #fff; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 500;}
+		.link-btn:hover {background-color: #4349db;}
+		.url-btn { display: inline-block; padding: 6px 15px; position: absolute; top: -30px; right: 0; background-color: #555; color: #fff; border-radius: 6px; font-size: 16px; text-decoration: none; font-weight: 500;}
+		.url-btn:hover {background-color: #333;}
+		#output { overflow-x: auto;}
+	</style>
+</head>
+<body>
+
+<div class="wrap">
+	<h1>📋 청년일경험 퍼블리싱 작업 리스트</h1>
+	<a class="url-btn" href="" target="_blank" title="새 창 열기">홈페이지 바로가기</a>	
+	<p class="date">프로젝트 시작일 : 25-10-27 <br>프로젝트 마감일 : 25-11-28</p>	
+
+	<!-- 작업 데이터 입력 (작업상태: 작업중, 작업완료, 작업예정) -->
+	<div id="csv-data">
+	Depth1,Depth2,Depth3,Depth4,파일명,비고,작업자,작업일자(수정날짜),작업상태
+	main,,,,[html/index.html],,YZ,251218,작업완료
+	</div>
+	<!-- // 작업 데이터 입력 -->
+
+	<!-- 작업 리스트 출력 -->
+	<div id="output"></div>
+	<!-- // 작업 리스트 출력 -->
+</div>
+
+<script>
+	const raw = document.getElementById('csv-data').innerText.trim();
+	const rows = raw.split('\n').map(r => r.split(','));
+	const headers = rows[0];
+	const body = rows.slice(1);
+
+	function formatDate(ymd) {
+		if (!ymd || ymd.length !== 6) return ymd;
+		const y = '20' + ymd.slice(0, 2);
+		const m = parseInt(ymd.slice(2, 4), 10);
+		const d = parseInt(ymd.slice(4, 6), 10);
+		return `${y}년 ${m}월 ${d}일`;
+	}
+
+	function formatStatus(status) {
+		if (status.includes('작업완료')) return '✅ 완료';
+		if (status.includes('작업예정')) return '⛔ 작업예정';
+		if (status.includes('작업중')) return '🔄 진행중';
+		return status;
+	}
+
+	function formatWorker(name) {
+		if (name === 'EJ') return 'EJ 😎';
+		if (name === 'YZ') return 'YZ 🐞';
+		return name;
+	}
+
+	const table = document.createElement('table');
+	const thead = table.createTHead();
+	const headerRow = thead.insertRow();
+
+	headers.forEach((h, i) => {
+		if (h === '작업상태') return;
+		const th = document.createElement('th');
+		th.textContent = h;
+		headerRow.appendChild(th);
+	});
+
+	const thLink = document.createElement('th');
+	thLink.textContent = 'Link';
+	headerRow.appendChild(thLink);
+
+	const thStatus = document.createElement('th');
+	thStatus.textContent = '작업상태';
+	headerRow.appendChild(thStatus);
+
+	const tbody = table.createTBody();
+	body.forEach(row => {
+		const tr = tbody.insertRow();
+		let statusCell = '';
+
+		row.forEach((cell, i) => {
+			const header = headers[i];
+			if (header === '작업상태') {
+				statusCell = cell;
+				return;
+			}
+
+			const td = tr.insertCell();
+			if (header === '파일명') {
+				const match = cell.match(/\[(.*?)\.html\]/);
+				if (match) {
+					const fileName = match[1];
+					const a = document.createElement('a');
+					a.href = fileName + '.html';
+					a.textContent = fileName;
+					a.target = '_blank';
+					td.appendChild(a);
+				} else {
+					td.textContent = cell;
+				}
+			} else if (header.includes('작업일자')) {
+				td.textContent = formatDate(cell);
+			} else if (header === '작업자') {
+				td.textContent = formatWorker(cell);
+			} else {
+				td.textContent = cell;
+			}
+		});
+
+		// 바로가기 버튼 열 추가
+		const filePathCell = row[headers.indexOf('파일명')];
+		const match = filePathCell.match(/\[(.*?)\.html\]/);
+		const filePath = match ? match[1] + '.html' : '';
+		const tdLink = tr.insertCell();
+		if (filePath) {
+			const btn = document.createElement('a');
+			btn.href = filePath;
+			btn.textContent = '바로가기';
+			btn.target = '_blank';
+			btn.className = 'link-btn';
+			tdLink.appendChild(btn);
+		}
+
+		// 작업상태 열 추가
+		const tdStatus = tr.insertCell();
+		const formatted = formatStatus(statusCell);
+		tdStatus.textContent = formatted;
+		tdStatus.className = statusCell.includes('작업완료') ? 'done' :
+							 statusCell.includes('작업중') ? 'doing' : 'not-done';
+	});
+
+	document.getElementById('output').appendChild(table);
+</script>
+
+</body>
+</html>

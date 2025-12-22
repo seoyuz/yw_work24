@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  
+
+<!-- 헤더에 csrf토큰 -->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+
+<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+<link rel="stylesheet" type="text/css" href="/static/external/jquery-ui/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="/static/external/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/layout.css">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+<link rel="icon" href="/static/images/common/KEIS.ico">
+
+<script src="/static/external/jquery/jquery-1.12.4.min.js"></script>
+<script src="/static/external/jquery-ui/jquery-ui.min.js"></script>
+<script src="/static/external/jquery-ui/jquery.ui.touch-punch.min.js"></script>
+<script src="/static/external/spin/spin.js"></script>
+<script src="/static/external/swiper/swiper-bundle.min.js"></script>
+<script src="/static/external/moment/moment.min.js"></script>
+<script src="/static/external/moment/locale/locales.min.js"></script>
+<script src="/static/external/blockui/jquery.blockUI.js"></script>
+<script src="/static/external/index/index.global.min.js"></script>
+<script src="/static/js/xh_commonUtil.js"></script>
+<script src="/static/js/xh_common.js"></script>
+<script src="/static/js/main.js"></script>
+<script>
+  
+    
+      const sessionCurrentMenuPurpSecd = "EBM02";
+    
+    
+  
+  
+  
+    const sessionConcTrgtSeCd = "EBM02";
+  
+  
+    const head_menuId = "MXH0000002";
+    const head_prgmId = "xhaa00_m01";
+  
+  //메시지 출력
+  if ("") {
+      setTimeout(function(){
+        alert("");
+      }, 100);
+  } else if ("") {
+      setTimeout(function(){
+        alert("");
+      }, 100);
+  }
+  ComLib.c.CONTEXT_PATH = "/";
+</script>
+<!-- title 내용 생성 -->
+
+
+
+<!-- ./ title 내용 생성 -->
+<title>홈 | 청년일경험 포털</title>
+</head>
+<body>
+    <div class="skip-to-content">
+        <a href="#container">본문내용 바로가기</a>
+        <a href="#gnb">메인메뉴 바로가기</a>
+    </div>
+    <div class="wrapper">
+        <!--............. header .............-->
+        <script src="/static/js/common.js"></script>
+        <header id="header">
+            <div class="header-top">
+                <div class="inner">
+                    <span class="nuri-text">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+                </div>
+            </div>
+            <div class="header-banner swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#none">
+                            <img src="/static/images/common/header-banner01.png" alt="청년 일경험 포털 UP 청년/기업 사업 안내 및 참여 방법 문의 청녀 일경험 중 부당대우, 대로사항 등 기타 일경험 관련문의 사업 안내 및 참여 방법 문의 상담센터 대표번호 1811-8447">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none">
+                            <img src="/static/images/common/header-banner01.png" alt="청년 일경험 포털 UP 청년/기업 사업 안내 및 참여 방법 문의 청녀 일경험 중 부당대우, 대로사항 등 기타 일경험 관련문의 사업 안내 및 참여 방법 문의 상담센터 대표번호 1811-8447">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none">
+                            <img src="/static/images/common/header-banner01.png" alt="청년 일경험 포털 UP 청년/기업 사업 안내 및 참여 방법 문의 청녀 일경험 중 부당대우, 대로사항 등 기타 일경험 관련문의 사업 안내 및 참여 방법 문의 상담센터 대표번호 1811-8447">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-controller">
+                    <div class="pagination"></div>
+                    <div class="btn-box">
+                        <button type="button" class="btn-prev"><span class="blind">이전</span></button>
+                        <button type="button" class="btn-next"><span class="blind">다음</span></button>
+                        <button type="button" class="btn-stop"><span class="blind">재생/정지</span></button>
+                    </div>
+                    <button type="button" class="close"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo-box"><a href="#none" class="logo">청년 일경험 포털</a></h1>
+                    <div class="srch-wrap">
+                        <div class="inp-wrap">
+                            <div class="inp-box">
+                                <input type="text" placeholder="검색어를 입력해주세요." class="inp" title="검색어를 입력해주세요.">
+                            </div>
+                            <button type="button" class="btn-srch"><span class="blind">검색</span></button>
+                        </div>
+                        <div class="history-area">
+                            <!-- 검색창 클릭 시 .active 생성 -->
+                            <div>
+                                <div class="left">
+                                    <div class="trend-box">
+                                        <p class="tit">인기검색어</p>
+                                        <!-- 최근 검색 X -->
+                                        <div class="center">
+                                            <p class="center">최근 검색어가 없습니다.</p>
+                                        </div>
+                                        <!-- 최근 검색 O -->
+                                        <div class="item-list">
+                                            <div class="item">
+                                                <span class="num">1</span>
+                                                <a href="#none">빅데이터</a>
+                                                <span class="rank down">
+                                                    <!-- down 일 경우 하락 -->
+                                                    <em>1</em>
+                                                    <i class="blind">하락</i>
+                                                </span>
+                                                
+                                            </div>
+                                            <div class="item">
+                                                <span class="num">2</span>
+                                                <a href="#none">공기업</a>
+                                                <span class="rank stay">
+                                                    <!-- stay 일 경우 유지 -->
+                                                    <em>1</em>
+                                                    <i class="blind">유지</i>
+                                                </span>
+                                            </div>
+                                            <div class="item">
+                                                <span class="num">3</span>
+                                                <a href="#none">청년인터</a>
+                                                <span class="rank up">
+                                                    <!-- up 일 경우 상승 -->
+                                                    <em>1</em>
+                                                    <i class="blind">상승</i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="history-box">
+                                        <p class="tit">최근 본 채용</p>
+                                        <!-- 로그인 전 -->
+                                        <div class="center">
+                                            <P>최근 본 채용은 로그인 후 <br>확인 가능합니다.</P>
+                                            <a href="#none" class="go-to-login">로그인</a>
+                                        </div>
+                                        <!-- 로그인 후 -->
+                                        <div class="item-list">
+                                            <div class="item">
+                                                <a href="#none">[한국표준협회] 경영사무</a>
+                                                <button class="btn-delete" title="삭제"></button>
+                                            </div>
+                                            <div class="item">
+                                                <a href="#none">[더나은] 광고마케팅</a>
+                                                <button class="btn-delete" title="삭제"></button>
+                                            </div>
+                                            <div class="item">
+                                                <a href="#none">[근로복지공단 서울북부지사] 경영사무</a>
+                                                <button class="btn-delete" title="삭제"></button>
+                                            </div>
+                                            <button class="btn-delete all">전체삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <p class="tit">지원 마감 임박 공고</p>
+                                    <ul class="list">
+                                        <li>
+                                            <span class="num">1.</span>
+                                            <a href="#none">[근로복지공단 서울북부지사][근로복지공단 서울북부지사][근로복지공단 서울북부지사]</a>
+                                        </li>
+                                        <li>
+                                            <span class="num">2.</span>
+                                            <a href="#none">[근로복지공단 서울북부지사]</a>
+                                        </li>
+                                        <li>
+                                            <span class="num">3.</span>
+                                            <a href="#none">[근로복지공단 서울북부지사]</a>
+                                        </li>
+                                        <li>
+                                            <span class="num">4.</span>
+                                            <a href="#none">[근로복지공단 서울북부지사]</a>
+                                        </li>
+                                        <li>
+                                            <span class="num">5.</span>
+                                            <a href="#none">[근로복지공단 서울북부지사]</a>
+                                        </li>
+                                        <li>
+                                            <span class="num">6.</span>
+                                            <a href="#none">[근로복지공단 서울북부지사]</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="keyword-wrap">
+                            <p>인기 검색어</p>
+                            <div class="item">
+                                <span class="num">5</span>
+                                <a href="#none">대학생 하계방학 아르바이트 지원사업</a>
+                                <span class="rank down">
+                                    <!-- down 일 경우 하락 -->
+                                    <em>1</em>
+                                    <i class="blind">하락</i>
+                                </span>
+                                <!-- <span class="rank stay"> -->
+                                    <!-- stay 일 경우 유지 -->
+                                    <!-- <em>1</em> -->
+                                    <!-- <i class="blind">유지</i> -->
+                                <!-- </span> -->
+                                <!-- <span class="rank up"> -->
+                                    <!-- up 일 경우 상승 -->
+                                    <!-- <em>1</em> -->
+                                    <!-- <i class="blind">상승</i> -->
+                                <!-- </span> -->
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="util">
+                        <li class="login"><a href="#none"><i class="icon"></i>로그인</a></li>
+                        <!-- <li><a href="#none" class="logout"><i class="icon"></i>로그아웃</a></li> -->
+                        <li class="join"><a href="#none" class="join"><i class="icon"></i>회원가입</a></li>
+                        <li><button type="button" class="all-menu"><i class="icon"></i>전체메뉴</button></li>
+                    </ul>
+                    <div class="gnb-wrap pc">
+                        <nav id="gnb" class="gnb">
+                            <ul class="depth1">
+                                <li class="depth1-item">
+                                    <a href="#none">사업소개  <i></i></a>
+                                    
+                                    <ul class="depth2">
+                                        <li class="depth2-item">
+                                            <a href="#none">청년일경험 포털</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">고용노동부 <br>청년일경험</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">주관기관별 <br>일경험 사업</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="depth1-item">
+                                    <a href="#none">일경험 프로그램  <i></i></a>
+                                    
+                                    <ul class="depth2">
+                                        <li class="depth2-item">
+                                            <a href="#none">프로그램 정보</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">모집일정</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">운영기관</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">참여기업</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="depth1-item">
+                                    <a href="#none">우수사례 커뮤니티  <i></i></a>
+                                    
+                                    <ul class="depth2">
+                                        <li class="depth2-item">
+                                            <a href="#none">인턴형</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">프로젝트형 우수사례</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">ESG지원형 우수사례</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">기업탐방형 우수사례</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="depth1-item">
+                                    <a href="#none">알림마당  <i></i></a>
+                                    
+                                    <ul class="depth2">
+                                        <li class="depth2-item">
+                                            <a href="#none">공지사항</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">자료실</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">VR 직업체험</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">직업정보 동영상</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">수료증 진위확인</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="depth1-item">
+                                    <a href="#none">고객센터  <i></i></a>
+                                    
+                                    <ul class="depth2">
+                                        <li class="depth2-item">
+                                            <a href="#none">자주하는 질문</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">이용안내</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">사이트맵</a>
+                                        </li>
+                                        <li class="depth2-item">
+                                            <a href="#none">운영 정책</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="dim"></div>
+        </header>
+        <!--............. mobile gnb .............-->
+        <div class="mobile-gnb-wrap">
+            <div class="mobile-gnb">
+                <div class="mobile-info">
+                    <a href="#none" class="login">로그인을 해주세요.</a>
+                </div>
+                <nav class="gnb">
+                    <ul class="depth1">
+                        <!-- 좌측메뉴 -->
+                        <li class="depth1-item">
+                            <a href="#none" title="메뉴 열기">사업소개<i></i></a>
+                            <!-- 대메뉴명 -->
+                            <ul class="depth2">
+                                <li class="depth2-item"><a href="#none">청년일경험 포털</a></li> <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">고용노동부 청년일경험</a></li> <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">주관기관별 일경험 사업</a></li> <!-- 2댑스 중메뉴명 -->
+                            </ul>
+                        </li>
+                        
+                        <li class="depth1-item">
+                            <a href="#n" title="메뉴 열기" class="">일경험 프로그램<i></i></a>
+                            <!-- 대메뉴명 -->
+                            <ul class="depth2">
+                                <li class="depth2-item"><a href="#none">프로그램 정보</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">모집일정</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">운영기관</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">참여기업</a></li>  <!-- 2댑스 중메뉴명 -->
+                            </ul>
+                        </li>
+                        
+                        <li class="depth1-item">
+                            <a href="#n" title="메뉴 열기">우수사례 커뮤니티<i></i></a>
+                            <!-- 대메뉴명 -->
+                            
+                            <ul class="depth2">
+                                <li class="depth2-item"><a href="#none">인턴형 우수사례</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">프로젝트형 우수사례</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">ESG지원형 우수사례</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">기업탐방형 우수사례</a></li>  <!-- 2댑스 중메뉴명 -->
+                            </ul>
+                        </li>
+                        
+                        <li class="depth1-item">
+                            <a href="#n" title="메뉴 열기">알림마당<i></i></a>
+                            <!-- 대메뉴명 -->
+                            
+                            <ul class="depth2">
+                                <li class="depth2-item"><a href="#none">공지사항</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">자료실</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">VR 직업체험</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">직업정보 동영상</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">수료증 진위확인</a></li>  <!-- 2댑스 중메뉴명 -->
+                            </ul>
+                        </li>
+                        
+                        <li class="depth1-item">
+                            <a href="#n" title="메뉴 열기">고객센터<i></i></a>
+                            <!-- 대메뉴명 -->
+                            
+                            <ul class="depth2">
+                                <li class="depth2-item"><a href="#none">자주하는 질문</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">이용안내</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">사이트맵</a></li>  <!-- 2댑스 중메뉴명 -->
+
+                                <li class="depth2-item"><a href="#none">운영 정책</a></li>  <!-- 2댑스 중메뉴명 -->
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <button type="button" class="mobile-close"><span class="blind">메뉴 닫기</span></button>
+            </div>
+        </div>
+        <!--............. //mobile gnb .............-->
+
+        <!--............. // header .............-->
+
+        <!--............. main container .............-->
+        <div id="container" class="container main">
+            <div class="inner">
+                <section class="visual">
+                    <div class="left">
+                        <h2>지금 가장 주목받는 일경험 프로그램</h2>
+                        <div class="tab-container">
+                            <ul class="btn-wrap">
+                                <li>
+                                    <button type="button" class="tab-btn01">개인형 맞춤 추천 프로그램</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="tab-btn02">고용노동부 주관 프로그램</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="tab-btn03">주관기관별 일경험 사업정보</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="tab-btn04 active" title="선택됨">20대가 선호하는 프로그램</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="tab-btn05">30대가 선호하는 프로그램</button>
+                                </li>
+                            </ul>
+                            <div class="tab">
+                                <ul class="contents-wrap">
+                                    <li class="item">
+                                        <a href="#none">
+                                            <span class="tag blue">인턴형</span>
+                                            <p class="tit">[경애원-기타(사회복지)]청년일경험 인턴형 25-1차</p>
+                                            <p class="organ">운영기관<span class="txt">(주)베스트인광주지사</span></p>
+                                            <span class="shortcut">바로가기</span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#none">
+                                            <span class="tag purple">기업탐방형</span>
+                                            <p class="tit">(22차수) 식품경영 일경험을 통한 취업인재양성 기업탐방 프로그램 [2기]</p>
+                                            <p class="organ">주관기관<span class="txt">대전광역시</span></p>
+                                            <span class="shortcut">바로가기</span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#none">
+                                            <span class="tag blue">인턴형</span>
+                                            <p class="tit">(국민연금공단 광주지역본부)7차 공공/사무행정 실무역량 강화 프로그램 (국민연금공단 광주지역본부)7차 공공/사무행정 실무역량 강화 프로그램</p>
+                                            <p class="organ">운영기관<span class="txt">(주)베스트인광주지사</span></p>
+                                            <span class="shortcut">바로가기</span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#none">
+                                            <span class="tag red">프로젝트형</span>
+                                            <p class="tit">[SPG수소여수공장] CO2 카트리지 에어백 안전장갑 제작</p>
+                                            <p class="organ">운영기관<span class="txt">(사)전남여수산학융합원</span></p>
+                                            <span class="shortcut">바로가기</span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#none">
+                                            <span class="tag green">ESG지원형</span>
+                                            <p class="tit">인천국제공항 일경험 프로젝트 [2기_항공보안]</p>
+                                            <p class="organ">운영기관<span class="txt">항공우주산학융합원</span></p>
+                                            <span class="shortcut">바로가기</span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#none">
+                                            <span class="tag green">ESG지원형</span>
+                                            <p class="tit">예비웹툰잡카데미 [국립공주대학교]</p>
+                                            <p class="organ">운영기관<span class="txt">씨엔씨레볼루션(주)</span></p>
+                                            <span class="shortcut">바로가기</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#none2" class="view-more">더보기<i class="icon"></i></a>
+                    </div>
+                    <div class="right">
+                        <h2>월간 추진 일정</h2>
+                        <div class="calender-wrap">
+                            <div class="calender-header">
+                                <button type="button" class="btn-prev"><span class="blind">이전 달</span></button>
+                                <div class="select-group">
+                                    <div class="select-box">
+                                        <div class="select-display">2026년</div>
+                                        <ul class="select-options">
+                                        <li>2024년</li>
+                                        <li>2025년</li>
+                                        <li>2026년</li>
+                                        <li>2027년</li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-box">
+                                        <div class="select-display">12월</div>
+                                        <ul class="select-options">
+                                        <li>1월</li>
+                                        <li>2월</li>
+                                        <li>3월</li>
+                                        <li>4월</li>
+                                        <li>5월</li>
+                                        <li>6월</li>
+                                        <li>7월</li>
+                                        <li>8월</li>
+                                        <li>9월</li>
+                                        <li>10월</li>
+                                        <li>11월</li>
+                                        <li>12월</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-next"><span class="blind">다음 달</span></button>
+                            </div>
+                            <div class="calender-box">
+                                <table class="calender">
+                                    <caption class="blind">월간 일정에 대한 표</caption>
+                                    <colgroup>
+                                        <col style="width: calc(100% / 7);">
+                                        <col style="width: calc(100% / 7);">
+                                        <col style="width: calc(100% / 7);">
+                                        <col style="width: calc(100% / 7);">
+                                        <col style="width: calc(100% / 7);">
+                                        <col style="width: calc(100% / 7);">
+                                        <col style="width: calc(100% / 7);">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">일</th>
+                                            <th scope="col">월</th>
+                                            <th scope="col">화</th>
+                                            <th scope="col">수</th>
+                                            <th scope="col">목</th>
+                                            <th scope="col">금</th>
+                                            <th scope="col">토</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="disabled"><span>26</span></td>
+                                            <td class="disabled"><span>27</span></td>
+                                            <td class="disabled"><span>28</span></td>
+                                            <td class="disabled"><span>29</span></td>
+                                            <td class="disabled"><span>30</span></td>
+                                            <td><button type="button"><span>1</span></button></td>
+                                            <td><button type="button"><span>2</span></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button"><span>3</span></button></td>
+                                            <td><button type="button"><span>4</span></button></td>
+                                            <td><button type="button"><span>5</span></button></td>
+                                            <td><button type="button"><span>6</span></button></td>
+                                            <td><button type="button"><span>7</span></button></td>
+                                            <td><button type="button"><span>8</span></button></td>
+                                            <td><button type="button"><span>9</span></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button"><span>10</span></button></td>
+                                            <td><button type="button"><span>11</span></button></td>
+                                            <td class="today"><button type="button"><span>12</span></button></td>
+                                            <td><button type="button"><span>13</span></button></td>
+                                            <td><button type="button"><span>14</span></button></td>
+                                            <td><button type="button"><span>15</span></button></td>
+                                            <td><button type="button"><span>16</span></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button"><span>17</span></button></td>
+                                            <td><button type="button"><span>18</span></button></td>
+                                            <td><button type="button"><span>19</span></button></td>
+                                            <td><button type="button"><span>20</span></button></td>
+                                            <td><button type="button"><span>21</span></button></td>
+                                            <td><button type="button"><span>22</span></button></td>
+                                            <td><button type="button"><span>23</span></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button"><span>24</span></button></td>
+                                            <td><button type="button"><span>25</span></button></td>
+                                            <td><button type="button"><span>26</span></button></td>
+                                            <td><button type="button"><span>27</span></button></td>
+                                            <td><button type="button"><span>28</span></button></td>
+                                            <td><button type="button"><span>29</span></button></td>
+                                            <td><button type="button"><span>30</span></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button"><span>31</span></button></td>
+                                            <td class="disabled"><span>1</span></td>
+                                            <td class="disabled"><span>2</span></td>
+                                            <td class="disabled"><span>3</span></td>
+                                            <td class="disabled"><span>4</span></td>
+                                            <td class="disabled"><span>5</span></td>
+                                            <td class="disabled"><span>6</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="list-box">
+                                <!-- 최대 4개 -->
+                                <div class="list">
+                                    <a href="#none">[스타법무법인]유니에스_인턴형_6기(마케팅)(마케팅)</a>
+                                </div>
+                                <div class="list">
+                                    <a href="#none">[구리농수산물공사] STEP 행정 15기</a>
+                                </div>
+                                <div class="list">
+                                    <a href="#none">[케이잡스]유니에스_인턴형_7기(사무행정)</a>
+                                </div>
+                                <div class="list">
+                                    <a href="#none">[비나텍] 미래내일일경험9-1</a>
+                                </div>
+                                <a href="#none" class="more" title="월간 추진 일정 더보기">+<i>163</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="section sec02">
+                <div class="inner">
+                    <h2>일경험 프로젝트</h2>
+                    <div class="tab-container">
+                        <ul class="btn-wrap">
+                            <li><button type="button" class="active" title="선택됨">등록일순</button></li>
+                            <li><button type="button" title="">마감일순</button></li>
+                        </ul>
+                        <div class="tab-contents">
+                            <div class="detail-wrap btn-wrap">
+                                <div class="details swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><button type="button" class="active" title="선택됨">전체</button></div>
+                                        <div class="swiper-slide"><button type="button">인턴형</button></div>
+                                        <div class="swiper-slide"><button type="button">프로젝트형</button></div>
+                                        <div class="swiper-slide"><button type="button">ESG지원형</button></div>
+                                        <div class="swiper-slide"><button type="button">기업탐방형</button></div>
+                                    </div>
+                                    <div class="swiper-controller">
+                                        <button type="button" class="btn-prev"><span class="blind">이전</span></button>
+                                        <button type="button" class="btn-next"><span class="blind">다음</span></button>
+                                    </div>
+                                </div>
+                                <div class="inp-group">
+                                    <div class="custom-select dropdown">
+                                        <button class="dropdown-btn ico-category" title="직무 선택 열기">직무 전체</button>
+                                        <div class="dropdown-box">
+                                            <div class="popup-header">직무 선택</div>
+                                            <div class="popup-body">
+                                                <div class="rdo-group block">
+                                                    <label class="rdo"><input type="radio" name="rdo01" value="" checked=""><span>직무 전체</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo01" value="10"><span>경영·사무</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo01" value="11"><span>금융·회계</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo01" value="12"><span>영업·해외영업</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo01" value="13"><span>광고·마케팅</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo01" value="14"><span>IT</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo01" value="15"><span>연구·R&amp;D</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo01" value="16"><span>생산·제조</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo01" value="17"><span>공공행정</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo01" value="99"><span>기타</span></label>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="popup-footer">
+                                                <button class="dropdown-apply"><span class="blind">직무 선택</span>적용</button>
+                                            </div>
+                                            <button class="popup-close" onclick="fn_CategoryPopClose();"><span class="blind">직무 선택 닫기</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="custom-select dropdown">
+                                        <button class="dropdown-btn ico-region" title="지역 선택 열기" aria-expanded="true">지역 전체</button>
+                                        <div class="dropdown-box">
+                                            <div class="popup-header">지역 선택</div>
+                                            <div class="popup-body">
+                                                <div class="rdo-group block">
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="" checked=""><span>지역 전체</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="11000"><span>서울</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="26000"><span>부산</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="27000"><span>대구</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="28000"><span>인천</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="29000"><span>광주</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="30000"><span>대전</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="31000"><span>울산</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="36110"><span>세종</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="41000"><span>경기</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="43000"><span>충북</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="44000"><span>충남</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="46000"><span>전남</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="47000"><span>경북</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="48000"><span>경남</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="50000"><span>제주</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="51000"><span>강원</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="52000"><span>전북</span></label>
+                                                    
+                                                    <label class="rdo"><input type="radio" name="rdo02" value="99999"><span>지역무관</span></label>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="popup-footer">
+                                                <button class="dropdown-apply"><span class="blind">지역 선택</span>적용</button>
+                                            </div>
+                                            <button class="popup-close"><span class="blind">지역 선택 닫기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 컨텐츠 없을 때 -->
+                            <div class="no-content">
+                                <p>모집 중인 프로그램이 없습니다. 😥</p>
+                            </div>
+
+                            <!-- 컨텐츠 있을 때 -->
+                            <div class="contents active">
+                                <ul class="item">
+                                    <li>
+                                        <div class="util-box">
+                                            <div class="tip-wrap">
+                                                <button type="button" class="btn-share tip-btn" title="버튼 열기">공유하기</button>
+                                                <div class="tip-box">
+                                                    <p class="tip-tit">공유하기</p>
+                                                    <div class="tip-contents">
+                                                        <button type="button" class="ins"><i class="icon"></i><span>인스타그램</span></button>
+                                                        <button type="button" class="ytb"><i class="icon"></i><span>유튜브</span></button>
+                                                        <button type="button" class="link"><i class="icon"></i><span>링크복사</span></button>
+                                                        <button type="button" class="message"><i class="icon"></i><span>문자발송</span></button>
+                                                    </div>
+                                                    <button type="button" class="tip-close"><span class="blind">닫기</span></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-wish">찜하기</button>
+                                        </div>
+                                        <p class="tit">[큐게임즈] IT(개발) 실전 직무 프로그램 9월 7-2기 4차_12주</p>
+                                        <p><span class="bold">모집기간</span><span>2025.08.21~2025.09.04</span></p>
+                                        <p><span class="bold">모집인원</span><span>1명</span></p>
+                                        <a href="#none1" class="">신청하기</a>
+                                    </li>
+                                    <li>
+                                        <div class="util-box">
+                                            <div class="tip-wrap">
+                                                <button type="button" class="btn-share tip-btn" title="버튼 열기">공유하기</button>
+                                                <div class="tip-box">
+                                                    <p class="tip-tit">공유하기</p>
+                                                    <div class="tip-contents">
+                                                        <button type="button" class="link"><i class="icon"></i><span>링크복사</span></button>
+                                                        <button type="button" class="message"><i class="icon"></i><span>문자발송</span></button>
+                                                    </div>
+                                                    <button type="button" class="tip-close"><span class="blind">닫기</span></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-wish">찜하기</button>
+                                        </div>
+                                        <p class="tit">[시큐어포인트] IT(솔루션 기술지원) 실전 직무 프로그램 9월 7-2기 4차_12주</p>
+                                        <p><span class="bold">모집기간</span><span>2025.08.21~2025.09.04</span></p>
+                                        <p><span class="bold">모집인원</span><span>1명</span></p>
+                                        <a href="#none2" class="">신청하기</a>
+                                    </li>
+                                    <li>
+                                        <div class="util-box">
+                                            <div class="tip-wrap">
+                                                <button type="button" class="btn-share tip-btn" title="버튼 열기">공유하기</button>
+                                                <div class="tip-box">
+                                                    <p class="tip-tit">공유하기</p>
+                                                    <div class="tip-contents">
+                                                        <button type="button" class="ins"><i class="icon"></i><span>인스타그램</span></button>
+                                                        <button type="button" class="link"><i class="icon"></i><span>링크복사</span></button>
+                                                        <button type="button" class="message"><i class="icon"></i><span>문자발송</span></button>
+                                                    </div>
+                                                    <button type="button" class="tip-close"><span class="blind">닫기</span></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-wish">찜하기</button>
+                                        </div>
+                                        <p class="tit">제37차 니트특화청년 대상 기업탐방 프로그램</p>
+                                        <p><span class="bold">모집기간</span><span>2025.08.21~2025.09.04</span></p>
+                                        <p><span class="bold">모집인원</span><span>1명</span></p>
+                                        <a href="#none3" class="">신청하기</a>
+                                    </li>
+                                    <li>
+                                        <div class="util-box">
+                                            <div class="tip-wrap">
+                                                <button type="button" class="btn-share tip-btn" title="버튼 열기">공유하기</button>
+                                                <div class="tip-box">
+                                                    <p class="tip-tit">공유하기</p>
+                                                    <div class="tip-contents">
+                                                        <button type="button" class="ins"><i class="icon"></i><span>인스타그램</span></button>
+                                                        <button type="button" class="ytb"><i class="icon"></i><span>유튜브</span></button>
+                                                        <button type="button" class="sns-x"><i class="icon"></i><span>X(SNS)</span></button>
+                                                        <button type="button" class="blg"><i class="icon"></i><span>블로그</span></button>
+                                                        <button type="button" class="fb"><i class="icon"></i><span>페이스북</span></button>
+                                                        <button type="button" class="link"><i class="icon"></i><span>링크복사</span></button>
+                                                        <button type="button" class="message"><i class="icon"></i><span>문자발송</span></button>
+                                                    </div>
+                                                    <button type="button" class="tip-close"><span class="blind">닫기</span></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-wish">찜하기</button>
+                                        </div>
+                                        <p class="tit">제38차 니트특화청년 대상 기업탐방 프로그램</p>
+                                        <p><span class="bold">모집기간</span><span>2025.08.21~2025.09.04</span></p>
+                                        <p><span class="bold">모집인원</span><span>1명</span></p>
+                                        <a href="#none4" class="">신청하기</a>
+                                    </li>
+                                    <li>
+                                        <div class="util-box">
+                                            <div class="tip-wrap">
+                                                <button type="button" class="btn-share tip-btn" title="버튼 열기">공유하기</button>
+                                                <div class="tip-box">
+                                                    <p class="tip-tit">공유하기</p>
+                                                    <div class="tip-contents">
+                                                        <button type="button" class="blg"><i class="icon"></i><span>블로그</span></button>
+                                                        <button type="button" class="fb"><i class="icon"></i><span>페이스북</span></button>
+                                                        <button type="button" class="link"><i class="icon"></i><span>링크복사</span></button>
+                                                        <button type="button" class="message"><i class="icon"></i><span>문자발송</span></button>
+                                                    </div>
+                                                    <button type="button" class="tip-close"><span class="blind">닫기</span></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-wish">찜하기</button>
+                                        </div>
+                                        <p class="tit">[큐게임즈] IT(개발) 실전 직무 프로그램 9월 7-2기 4차_12주</p>
+                                        <p><span class="bold">모집기간</span><span>2025.08.21~2025.09.04</span></p>
+                                        <p><span class="bold">모집인원</span><span>1명</span></p>
+                                        <a href="#none5" class="">신청하기</a>
+                                    </li>
+                                    <li>
+                                        <div class="util-box">
+                                            <div class="tip-wrap">
+                                                <button type="button" class="btn-share tip-btn" title="버튼 열기">공유하기</button>
+                                                <div class="tip-box">
+                                                    <p class="tip-tit">공유하기</p>
+                                                    <div class="tip-contents">
+                                                        <button type="button" class="ins"><i class="icon"></i><span>인스타그램</span></button>
+                                                        <button type="button" class="fb"><i class="icon"></i><span>페이스북</span></button>
+                                                        <button type="button" class="link"><i class="icon"></i><span>링크복사</span></button>
+                                                        <button type="button" class="message"><i class="icon"></i><span>문자발송</span></button>
+                                                    </div>
+                                                    <button type="button" class="tip-close"><span class="blind">닫기</span></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-wish">찜하기</button>
+                                        </div>
+                                        <p class="tit">[시큐어포인트] IT(솔루션 기술지원) 실전 직무 프로그램 9월 7-2기 4차_12주</p>
+                                        <p><span class="bold">모집기간</span><span>2025.08.21~2025.09.04</span></p>
+                                        <p><span class="bold">모집인원</span><span>1명</span></p>
+                                        <a href="#none6" class="">신청하기</a>
+                                    </li>
+                                    <li>
+                                        <div class="util-box">
+                                            <div class="tip-wrap">
+                                                <button type="button" class="btn-share tip-btn" title="버튼 열기">공유하기</button>
+                                                <div class="tip-box">
+                                                    <p class="tip-tit">공유하기</p>
+                                                    <div class="tip-contents">
+                                                        <button type="button" class="ins"><i class="icon"></i><span>인스타그램</span></button>
+                                                        <button type="button" class="ytb"><i class="icon"></i><span>유튜브</span></button>
+                                                        <button type="button" class="sns-x"><i class="icon"></i><span>X(SNS)</span></button>
+                                                        <button type="button" class="link"><i class="icon"></i><span>링크복사</span></button>
+                                                        <button type="button" class="message"><i class="icon"></i><span>문자발송</span></button>
+                                                    </div>
+                                                    <button type="button" class="tip-close"><span class="blind">닫기</span></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-wish">찜하기</button>
+                                        </div>
+                                        <p class="tit">제37차 니트특화청년 대상 기업탐방 프로그램</p>
+                                        <p><span class="bold">모집기간</span><span>2025.08.21~2025.09.04</span></p>
+                                        <p><span class="bold">모집인원</span><span>1명</span></p>
+                                        <a href="#none7" class="">신청하기</a>
+                                    </li>
+                                    <li>
+                                        <div class="util-box">
+                                            <div class="tip-wrap">
+                                                <button type="button" class="btn-share tip-btn" title="버튼 열기">공유하기</button>
+                                                <div class="tip-box">
+                                                    <p class="tip-tit">공유하기</p>
+                                                    <div class="tip-contents">
+                                                        <button type="button" class="ins"><i class="icon"></i><span>인스타그램</span></button>
+                                                        <button type="button" class="ytb"><i class="icon"></i><span>유튜브</span></button>
+                                                        <button type="button" class="sns-x"><i class="icon"></i><span>X(SNS)</span></button>
+                                                        <button type="button" class="blg"><i class="icon"></i><span>블로그</span></button>
+                                                        <button type="button" class="fb"><i class="icon"></i><span>페이스북</span></button>
+                                                        <button type="button" class="link"><i class="icon"></i><span>링크복사</span></button>
+                                                        <button type="button" class="message"><i class="icon"></i><span>문자발송</span></button>
+                                                    </div>
+                                                    <button type="button" class="tip-close"><span class="blind">닫기</span></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-wish">찜하기</button>
+                                        </div>
+                                        <p class="tit">제38차 니트특화청년 대상 기업탐방 프로그램</p>
+                                        <p><span class="bold">모집기간</span><span>2025.08.21~2025.09.04</span></p>
+                                        <p><span class="bold">모집인원</span><span>1명</span></p>
+                                        <a href="#none8" class="">신청하기</a>
+                                    </li>
+
+                                </ul>
+                                <a href="#none" class="view-more">더보기<i class="icon"></i></a>
+                            </div>
+                            <div class="contents">
+                                <ul class="item">
+                                    <li><a href="#none">
+
+                                    </a></li>
+                                    <li><a href="#none">
+
+                                    </a></li>
+                                    <li><a href="#none">
+
+                                    </a></li>
+                                    <li><a href="#none">
+
+                                    </a></li>
+                                    <li><a href="#none">
+
+                                    </a></li>
+                                    <li><a href="#none">
+
+                                    </a></li>
+                                    <li><a href="#none">
+
+                                    </a></li>
+                                    <li><a href="#none">
+
+                                    </a></li>
+                                </ul>
+                                <a href="#none" class="view-more">더보기<i class="icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section sec03">
+                <div class="inner">
+                    <div class="program-slider">
+                        <h2>주관기관별 일경험 사업 정보</h2>
+                        <ul>
+                            <li>
+                                <p>중앙부처, 지방자치단체, 공공기관 등에서 수행하는 다양한 일경험 사업 및 유사 사업을 소개하는 공간입니다.</p>
+                            </li>
+                            <li>
+                                <p>여기에 소개하는 사업은 ⌈고용노동부 청년 일경험 지원사업⌋("미래내일 일경험 지원사업")과 사업 성격•목적, 지원 대상•내용, 지원 절차, 모집 기간 등이 서로 다르므로 구체적인 내용은 해당 기관에 반드시 확인하여 주시기 바랍니다.</p>
+                            </li>
+                        </ul>
+                        <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#none">
+                                        <p>2025년</p>
+                                        <p>교육부</p>
+                                        <p class="tit">글로벌 현장학습 프로그램 운영(전문대학 글로벌 현장학습)글로벌 현장학습 프로그램 운영(전문대학 글로벌 현장학습)</p>
+                                        <p class="desc">전문대 2학기 이상을 이수한 재학생 (대상 인원: 310명)전문대 2학기 이상을 이수한 재학생 (대상 인원: 310명)전문대 2학기 이상을 이수한 재학생 (대상 인원: 310명)</p>
+                                        <span class="shortcut">바로가기</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none">
+                                        <p>2025년</p>
+                                        <p>재외동포청</p>
+                                        <p class="tit">글로벌 현장학습 프로그램 운영(전문대학 글로벌 현장학습)</p>
+                                        <p class="desc">전문대 2학기 이상을 이수한 재학생 (대상 인원: 310명)</p>
+                                        <span class="shortcut">바로가기</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none">
+                                        <p>2025년</p>
+                                        <p>경상남도 의령군청</p>
+                                        <p class="tit">글로벌 현장학습 프로그램 운영(전문대학 글로벌 현장학습)</p>
+                                        <p class="desc">전문대 2학기 이상을 이수한 재학생 (대상 인원: 310명)</p>
+                                        <span class="shortcut">바로가기</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none">
+                                        <p>2025년</p>
+                                        <p>국가철도공단</p>
+                                        <p class="tit">글로벌 현장학습 프로그램 운영(전문대학 글로벌 현장학습)</p>
+                                        <p class="desc">전문대 2학기 이상을 이수한 재학생 (대상 인원: 310명)</p>
+                                        <span class="shortcut">바로가기</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none">
+                                        <p>2025년</p>
+                                        <p>대전광역시청</p>
+                                        <p class="tit">글로벌 현장학습 프로그램 운영(전문대학 글로벌 현장학습)</p>
+                                        <p class="desc">전문대 2학기 이상을 이수한 재학생 (대상 인원: 310명)</p>
+                                        <span class="shortcut">바로가기</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none">
+                                        <p>2025년</p>
+                                        <p>교육부</p>
+                                        <p class="tit">글로벌 현장학습 프로그램 운영(전문대학 글로벌 현장학습)</p>
+                                        <p class="desc">전문대 2학기 이상을 이수한 재학생 (대상 인원: 310명)</p>
+                                        <span class="shortcut">바로가기</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none">
+                                        <p>2025년</p>
+                                        <p>재외동포청</p>
+                                        <p class="tit">글로벌 현장학습 프로그램 운영(전문대학 글로벌 현장학습)</p>
+                                        <p class="desc">전문대 2학기 이상을 이수한 재학생 (대상 인원: 310명)</p>
+                                        <span class="shortcut">바로가기</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none">
+                                        <p>2025년</p>
+                                        <p>경상남도 의령군청</p>
+                                        <p class="tit">글로벌 현장학습 프로그램 운영(전문대학 글로벌 현장학습)</p>
+                                        <p class="desc">전문대 2학기 이상을 이수한 재학생 (대상 인원: 310명)</p>
+                                        <span class="shortcut">바로가기</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-controller">
+                                <div class="pagination"></div>
+                                <div class="btn-box">
+                                    <button type="button" class="btn-prev"><span class="blind">이전으로</span></button>
+                                    <button type="button" class="btn-next"><span class="blind">이전으로</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#none" class="view-more">더보기<i class="icon"></i></a>
+                    </div>
+                    <div class="partner-slider">
+                        <h2>총 <span class="num">6892</span>개의 기업이 프로그램에 참여중입니다.</h2>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#none" class="shortcut">한국도로교통공단 (본사) <i class="icon"></i></a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none" class="shortcut">(주)한국경영인증원 (본사) <i class="icon"></i></a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none" class="shortcut">(주) 코세스 (본사) <i class="icon"></i></a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none" class="shortcut">주식회사 하나금융지주 (본사) <i class="icon"></i></a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none" class="shortcut">주식회사에스테이트 (본사) <i class="icon"></i></a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none" class="shortcut">한국인삼공사 (본사) <i class="icon"></i></a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none" class="shortcut">주식회사 에스테이트 (본사)<i class="icon"></i></a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none" class="shortcut">한국인삼공사 (본사) <i class="icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-controller">
+                            <div class="btn-box">
+                                <button type="button" class="btn-stop"><span class="blind">멈추기</span></button>
+                                <button type="button" class="btn-prev"><span class="blind">이전</span></button>
+                                <button type="button" class="btn-next"><span class="blind">다음</span></button>
+                            </div>
+                        </div>
+                        <a href="#none" class="view-more">더보기<i class="icon"></i></a>
+                    </div>
+                </div>
+            </section>
+            <section class="section sec04">
+                <div class="inner">
+                    <div class="video-wrap">
+                        <h2>직업정보동영상</h2>
+                        <div class="detail-wrap btn-wrap">
+                            <ul class="details ">
+                                <li><button type="button" class="active" title="선택됨">전체</button></li>
+                                <li><button type="button">신직업</button></li>
+                                <li><button type="button">국제기구</button></li>
+                                <li><button type="button">기업직무소개</button></li>
+                            </ul>
+                        </div>
+                        <div class="tab-cont">
+                            <div class="item">
+                                <a href="#none">
+                                    <div class="img-box">
+                                        <img src="/static/images/main/img_thumb01.png" alt="한국고용정보원 인턴경험으로 ai 실무레벨 상승">
+                                    </div>
+                                    <p class="tit">[ 직업군별 ] 쓰리빌리언 (AI 의료 분야 취업)</p>
+                                    <p class="desc">의료산업과 IT의 융합이 글로벌 트렌드로 자리 잡으며 진단과 디지털 헬스, 신약 개발에서 AI가 활발하게 접목되고 있습니다.</p>
+                                    <p class="shortcut">자세히보기</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#none">
+                                    <div class="img-box">
+                                        <img src="/static/images/main/img_thumb02.png" alt="한국고용정보원 인턴경험으로 ai 실무레벨 상승">
+                                    </div>
+                                    <p class="tit">[ 직업군별 ] 쓰리빌리언 (AI 의료 분야 취업)</p>
+                                    <p class="desc">의료산업과 IT의 융합이 글로벌 트렌드로 자리 잡으며 진단과 디지털 헬스, 신약 개발에서 AI가 활발하게 접목되고 있습니다.</p>
+                                    <p class="shortcut">자세히보기</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#none">
+                                    <div class="img-box">
+                                        <img src="/static/images/main/img_thumb03.png" alt="한국고용정보원 인턴경험으로 ai 실무레벨 상승">
+                                    </div>
+                                    <p class="tit">[ 직업군별 ] 쓰리빌리언 (AI 의료 분야 취업)</p>
+                                    <p class="desc">의료산업과 IT의 융합이 글로벌 트렌드로 자리 잡으며 진단과 디지털 헬스, 신약 개발에서 AI가 활발하게 접목되고 있습니다.</p>
+                                    <p class="shortcut">자세히보기</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#none">
+                                    <div class="img-box">
+                                        <img src="/static/images/main/img_thumb04.png" alt="한국고용정보원 인턴경험으로 ai 실무레벨 상승">
+                                    </div>
+                                    <p class="tit">[ 신직업 ] 반려동물 동반 여행코디네이터_Short</p>
+                                    <p class="desc">안녕하세요. 반려동과 함께하는 여행을 기획하는 이태규입니다. 저는 국내 최초로 반려동물과 함께 떠날 수 있는 여행사를 만들었는</p>
+                                    <p class="shortcut">자세히보기</p>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#none" class="view-more">더보기 <i class="icon"></i></a>
+                    </div>
+                    <div class="vr-wrap">
+                        <h2>VR 직업체험</h2>
+                        <div class="detail-wrap btn-wrap">
+                            <ul class="details">
+                                <li><button type="button" class="active" title="선택됨">전체</button></li>
+                                <li><button type="button">신직업</button></li>
+                                <li><button type="button">국제기구</button></li>
+                                <li><button type="button">기업직무소개</button></li>
+                            </ul>
+                        </div>
+                        <div class="tab-cont">
+                            <div class="item">
+                                <a href="#none">
+                                    <div class="img-box">
+                                        <img src="/static/images/main/img_thumb01.png" alt="한국고용정보원 인턴경험으로 ai 실무레벨 상승">
+                                    </div>
+                                    <p class="tit">[ 직업군별 ] 쓰리빌리언 (AI 의료 분야 취업)</p>
+                                    <p class="desc">의료산업과 IT의 융합이 글로벌 트렌드로 자리 잡으며 진단과 디지털 헬스, 신약 개발에서 AI가 활발하게 접목되고 있습니다.</p>
+                                    <p class="shortcut">자세히보기</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#none">
+                                    <div class="img-box">
+                                        <img src="/static/images/main/img_thumb02.png" alt="한국고용정보원 인턴경험으로 ai 실무레벨 상승">
+                                    </div>
+                                    <p class="tit">[ 직업군별 ] 쓰리빌리언 (AI 의료 분야 취업)</p>
+                                    <p class="desc">의료산업과 IT의 융합이 글로벌 트렌드로 자리 잡으며 진단과 디지털 헬스, 신약 개발에서 AI가 활발하게 접목되고 있습니다.</p>
+                                    <p class="shortcut">자세히보기</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#none">
+                                    <div class="img-box">
+                                        <img src="/static/images/main/img_thumb03.png" alt="한국고용정보원 인턴경험으로 ai 실무레벨 상승">
+                                    </div>
+                                    <p class="tit">[ 직업군별 ] 쓰리빌리언 (AI 의료 분야 취업)</p>
+                                    <p class="desc">의료산업과 IT의 융합이 글로벌 트렌드로 자리 잡으며 진단과 디지털 헬스, 신약 개발에서 AI가 활발하게 접목되고 있습니다.</p>
+                                    <p class="shortcut">자세히보기</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#none">
+                                    <div class="img-box">
+                                        <img src="/static/images/main/img_thumb04.png" alt="한국고용정보원 인턴경험으로 ai 실무레벨 상승">
+                                    </div>
+                                    <p class ="tit">[ 신직업 ] 반려동물 동반 여행코디네이터_Short[ 신직업 ] 반려동물 동반 여행코디네이터_Short[ 신직업 ] 반려동물 동반 여행코디네이터_Short</p>
+                                    <p class="desc">안녕하세요. 반려동과 함께하는 여행을 기획하는 이태규입니다. 저는 국내 최초로 반려동물과 함께 떠날 수 있는 여행사를 만들었는</p>
+                                    <p class="shortcut">자세히보기</p>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#none" class="view-more">더보기 <i class="icon"></i></a>
+                    </div>
+                </div>
+            </section>
+            <section class="section sec05">
+                <div class="inner">
+                    <div class="notice">
+                        <h2>공지사항</h2>
+                        <ul class="list">
+                            <li><a href="#none">
+                                <p class="tit">(8.1(금) 22시~)네트워크 및 연관 시스템 DB 증설작업 안내 (8.1(금) 22시~)네트워크 및 연관 시스템 DB 증설작업 안내</p>
+                                <p class="date">2026-04-12</p>
+                            </a></li>
+                            <li><a href="#none">
+                                <p class="tit">(8.1(금) 22시~)네트워크 및 연관 시스템 DB 증설작업 안내</p>
+                                <p class="date">2026-04-12</p>
+                            </a></li>
+                            <li><a href="#none">
+                                <p class="tit">(8.1(금) 22시~)네트워크 및 연관 시스템 DB 증설작업 안내</p>
+                                <p class="date">2026-04-12</p>
+                            </a></li>
+                            <li><a href="#none">
+                                <p class="tit">(8.1(금) 22시~)네트워크 및 연관 시스템 DB 증설작업 안내</p>
+                                <p class="date">2026-04-12</p>
+                            </a></li>
+                        </ul>
+                        <a href="#none" class="view-more">더보기 <i class="icon"></i></a>
+                    </div>
+                    <div class="faq">
+                        <h2>자주하는질문(FAQ)</h2>
+                        <ul class="list">
+                            <li><a href="#none">
+                                <p class="tit">(8.1(금) 22시~)네트워크 및 연관 시스템 DB 증설작업 안내 (8.1(금) 22시~)네트워크 및 연관 시스템 DB 증설작업 안내</p>
+                                <p class="date">2026-04-12</p>
+                            </a></li>
+                            <li><a href="#none">
+                                <p class="tit">(8.1(금) 22시~)네트워크 및 연관 시스템 DB 증설작업 안내</p>
+                                <p class="date">2026-04-12</p>
+                            </a></li>
+                            <li><a href="#none">
+                                <p class="tit">(8.1(금) 22시~)네트워크 및 연관 시스템 DB 증설작업 안내</p>
+                                <p class="date">2026-04-12</p>
+                            </a></li>
+                            <li><a href="#none">
+                                <p class="tit">(8.1(금) 22시~)네트워크 및 연관 시스템 DB 증설작업 안내</p>
+                                <p class="date">2026-04-12</p>
+                            </a></li>
+                        </ul>
+                        <a href="#none" class="view-more">더보기 <i class="icon"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!--............. // main container .............-->
+        <footer class="footer">
+            <div class="inner">
+                <div class="logo">
+                    <img src="/static/images/common/logo.png" alt="청년 일경험 포털 로고">
+                </div>
+                <div class="footer-top">
+                    <div>
+                        <p class="addr">(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</p>
+                        <ul class="info">
+                            <!-- <li></li> -->
+                            <li><span class="bold">홈페이지 전산 이용 문의</span><a href="tel:1577-7114">1577-7114</a><p>(유료, 한국고용정보원 고객상담센터 평일 09:00~18:00)</p></li>
+                            <li><span class="bold">고용·노동 분야 제도 문의</span><a href="tel:1350">국번없이 1350</a><p>(유료, 고용노동부 고객상담센터 평일 09:00~18:00)</p></li>
+                            
+                        </ul>
+                        <div class="link-list">
+                            <a href="#none">이용안내</a>
+                            <a href="#none" class="blue">개인정보처리방침</a>
+                            <a href="#none">이메일무단수집거부</a>
+                            <a href="#none">저작권보호정책</a>
+                            <a href="#none">사이트맵</a>
+                        </div>
+                        <ul class="footer-bottom">
+                            <li><a href="#none" target="_blank" title="새 창 열기">
+                                <img src="/static/images/common/logo-moel.png" alt="고용노동부">
+                                <i class="new-tab"></i>
+                            </a></li>
+                            <li><a href="#none" target="_blank" title="새 창 열기">
+                                <img src="/static/images/common/logo-keis.png" alt="한국고용정보원">
+                                <i class="new-tab"></i>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="wa">
+                        <img src="/static/images/common/logo-wa.png" alt="WA 품질인증 마크, 웹와치(WebWatch) 2025.03.13 ~ 2026.03.12">
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>Copyright © 2025 고용노동부 한국고용정보원 all rights reserved.</p>
+                    <div class="family-site-wrap">
+                        <div class="family-site">
+                            <button type="button" title="열기" class="family-site-button">패밀리사이트</button>
+                            <ul class="family-site-list">
+                                <li><a href="#none" title="새 창 열기" target="_blank">family-site</a></li>
+                                <li><a href="#none" title="새 창 열기" target="_blank">family-site</a></li>
+                                <li><a href="#none" title="새 창 열기" target="_blank">family-site</a></li>
+                                <li><a href="#none" title="새 창 열기" target="_blank">family-site</a></li>
+                                <li><a href="#none" title="새 창 열기" target="_blank">family-site</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>    
+</body>
+</html>
