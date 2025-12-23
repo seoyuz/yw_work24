@@ -1232,8 +1232,8 @@ a.view-more i{
     .visual .left a.view-more{ top: 54px; }
     .left .tab-container .item{ flex-wrap: nowrap; gap: 0;}
     .left .tab-container .item li{ width: 100%; min-width: 80%; min-height: 100%;}
-    .visual .details.swiper-container{ width: calc(100% - 84px); margin: 0 auto; }
-    .visual .details .swiper-controller{ display: block; }
+    /* .visual .details.swiper-container{ width: calc(100% - 84px); margin: 0 auto; }
+    .visual .details .swiper-controller{ display: block; } */
     .dropdown-btn { min-width: auto; }
     .left .tab-container .item .util-box{position: relative;}
     .tip-wrap{position: static;}
@@ -1245,26 +1245,27 @@ a.view-more i{
     .sec03 .view-more{ top: 56px; }
     /* .sec03 .partner-slider .view-more{ top: 33px; } */
     .sec04{padding-top: 0;}
-    .sec04 .swiper-wrapper{ flex-wrap: nowrap; gap: 0;}
+    .sec04 .details .swiper-wrapper{ flex-wrap: nowrap; gap: 0;}
+    .sec04 .responsive .swiper-wrapper{ flex-wrap: nowrap; gap: 0;}
     .sec04 .tab-cont .item{ width: 100%; }
     .sec04 a.view-more{top: 18px;}
     .sec05 .list .tit{ width: 100%; }
     .sec05 .list .date{ display: none; }
 
-    .swiper-container.responsive .swiper-controller{display: block; margin: 12px auto 0; font-size: 0; text-align: center;}
+    /* .swiper-container.responsive .swiper-controller{display: block; margin: 12px auto 0; font-size: 0; text-align: center;}
     .swiper-container.responsive .swiper-controller .btn-prev, .btn-next{display: inline-block; width: 40px; height: 40px; background-color: transparent; border: 1px solid #CDD1D5; border-radius: 100px; background: url(../images/common/ico_arrow.png) no-repeat center;}
     .swiper-container.responsive .swiper-controller .btn-next{transform: rotate(180deg);}
     .swiper-container.responsive .swiper-controller .pagination{display: inline-block; width: auto; margin: 0 20px;}
     .swiper-container.responsive .swiper-controller .swiper-pagination-bullet{width: 8px; height: 8px;}
-    .swiper-container.responsive .swiper-controller .swiper-pagination-bullet-active{width: 20px; border-radius: 100px;}
+    .swiper-container.responsive .swiper-controller .swiper-pagination-bullet-active{width: 20px; border-radius: 100px;} */
 
 
     /* 251219 (ej) */
-    .sec03 .swiper-controller { text-align: center;}
+    /* .sec03 .swiper-controller { text-align: center;}
     .sec03 .swiper-controller .btn { position: relative; }
     .sec03 .swiper-controller .pagination { position: relative; display: inline-block; transform: none; left: auto;}
     .sec03 .swiper-controller .btn-prev {left: auto; right: auto;}
-    .sec03 .swiper-controller .btn-next {right: auto;}
+    .sec03 .swiper-controller .btn-next {right: auto;} */
 }
 @media screen and (max-width: 500px){
     .dropdown-btn{ padding-left: 44px; }
@@ -1279,6 +1280,22 @@ a.view-more i{
     .sec04 .details .swiper-controller .prev, .sec04 .details .swiper-controller .next{top: 54px;}
     .sec04 .tab-cont .item a{ height: auto;}
     .sec04 .tab-cont .item .shortcut{position: relative; bottom: 0; margin-top: 16px;}
+    
+    .visual .details.swiper-container{ width: calc(100% - 84px); margin: 0 auto; }
+    .visual .details .swiper-controller{ display: block; }
+    .swiper-container.responsive .swiper-controller{display: block; margin: 12px auto 0; font-size: 0; text-align: center;}
+    .swiper-container.responsive .swiper-controller .btn-prev, .btn-next{display: inline-block; width: 40px; height: 40px; background-color: transparent; border: 1px solid #CDD1D5; border-radius: 100px; background: url(../images/common/ico_arrow.png) no-repeat center;}
+    .swiper-container.responsive .swiper-controller .btn-next{transform: rotate(180deg);}
+    .swiper-container.responsive .swiper-controller .pagination{display: inline-block; width: auto; margin: 0 20px;}
+    .swiper-container.responsive .swiper-controller .swiper-pagination-bullet{width: 8px; height: 8px;}
+    .swiper-container.responsive .swiper-controller .swiper-pagination-bullet-active{width: 20px; border-radius: 100px;}
+    /* 251219 (ej) */
+    .sec03 .swiper-controller { text-align: center;}
+    .sec03 .swiper-controller .btn { position: relative; }
+    .sec03 .swiper-controller .pagination { position: relative; display: inline-block; transform: none; left: auto;}
+    .sec03 .swiper-controller .btn-prev {left: auto; right: auto;}
+    .sec03 .swiper-controller .btn-next {right: auto;}
+
     .details .swiper-controller button{background-color: #FFFFFF;}
     .details .swiper-controller button::after{height: 34px; background: linear-gradient(90deg, #FFFFFF 27.34%, rgb(255 255 255 / 0%) 100%);}
 }

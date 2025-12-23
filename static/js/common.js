@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerDim = document.querySelector("#header .dim");
 
     const mobileGnbWrap = document.querySelector('.mobile-gnb-wrap');
-    const mobileMenu = document.querySelector('.util .all-menu');
+    const mobileMenu = document.querySelectorAll('button.all-menu');
     const mobileClose = document.querySelector('.mobile-gnb-wrap .mobile-close');
 
     const screenWidth = window.innerWidth;
@@ -206,13 +206,15 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileGnb();
 
     function openMobileWrap(){
-        mobileMenu.addEventListener('click', function(){
+        mobileMenu.forEach(btn => {
+            btn.addEventListener('click', function(){
 
-            if( !mobileGnbWrap.classList.contains('open')) {
-                mobileGnbWrap.classList.add('open');
-                document.querySelector('body').classList.add('noScroll');
-                setMobileGnbFocusTrap();
-            }
+                if( !mobileGnbWrap.classList.contains('open')) {
+                    mobileGnbWrap.classList.add('open');
+                    document.querySelector('body').classList.add('noScroll');
+                    setMobileGnbFocusTrap();
+                }
+            });
         });
     }
     openMobileWrap();
@@ -397,7 +399,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 251219 다른 영역 클릭 시 패밀리사이트 닫기 (ej)
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', (e) => {
+        
         familySiteWrap.forEach((wrap, i) => {
             if (!wrap.contains(e.target)) {
                 familySiteList[i].classList.remove('active');
